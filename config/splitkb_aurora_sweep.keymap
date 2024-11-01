@@ -22,13 +22,6 @@ _name_: macro_##_name_ {                   \
     bindings       = <_bindings_>;         \
 };
 
-/ {
-    macros {
-        MACRO(ws1, &kp DOT &kp DOT)
-    };
-};
-
-
 &mt {
     flavor = "balanced";
     tapping-term-ms = <280>;
@@ -38,6 +31,10 @@ _name_: macro_##_name_ {                   \
 };
 
 / {
+
+    macros {
+        MACRO(ws1, &kp DOT &kp DOT)
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -95,7 +92,7 @@ _name_: macro_##_name_ {                   \
             bindings = <
 &bt BT_SEL 0  &kp N7        &kp N8        &kp N9  &bt BT_CLR    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_COPY  &kp K_UNDO
 &trans        &kp N4        &kp N5        &kp N6  &none         &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp CAPS
-&none         &kp ws2       &none         &none   &none         &kp INS     &kp HOME     &kp PG_DN   &kp PG_UP   &kp END
+&none         &ws1       &none         &none   &none         &kp INS     &kp HOME     &kp PG_DN   &kp PG_UP   &kp END
                                           &none   &none         &kp ESCAPE  &trans
             >;
         };
