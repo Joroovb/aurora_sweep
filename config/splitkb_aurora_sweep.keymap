@@ -22,14 +22,15 @@
 };
 
 #define WS(_num_) \
- ws_num_: ws_num_ { \
+ ws##_num_: ws##_num_ { \
         compatible = "zmk,behavior-macro";  \
         bindings                            \
             = <&macro_press &kp LALT>       \
-            , <&macro_tap &kp N_num_>           \
+            , <&macro_tap &kp N##_num_>           \
             , <&macro_release &kp LALT>     \
             ;                               \
-        #binding-cells = <0>;};                                         
+        #binding-cells = <0>;               \
+      };                                         
 
 / {
 
@@ -44,6 +45,7 @@
 
             #binding-cells = <0>;
       };
+
       WS(2)
     };
 
