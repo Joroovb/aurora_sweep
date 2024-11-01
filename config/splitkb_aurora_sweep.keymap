@@ -33,7 +33,16 @@ _name_: macro_##_name_ {                   \
 / {
 
     macros {
-        MACRO(ws1, &kp DOT &kp DOT)
+        ws1: ws1 {
+            label = "Workspace 1";
+            compatible = "zmk,behavior-macro";
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LALT>
+                ;
+
+            #binding-cells = <0>;
     };
 
     combos {
