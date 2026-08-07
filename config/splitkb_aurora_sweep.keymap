@@ -104,7 +104,7 @@
 
         nav_layer {
             bindings = <
-&bt BT_SEL 0  &ws7        &ws8        &ws9  &bt BT_CLR    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_COPY  &kp K_UNDO
+&bt BT_SEL 0  &bt BT_SEL 1        &ws8        &ws9  &bt BT_CLR    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_COPY  &kp K_UNDO
 &trans        &ws4        &ws5        &ws6  &caps_word    &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp CAPS
 &none         &ws1        &ws2        &ws3  &none         &kp INS     &kp HOME     &kp PG_DN   &kp PG_UP   &kp END
                                       &none &none         &kp ESCAPE  &trans
